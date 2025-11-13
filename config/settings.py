@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base',  #　追記
+    'cloudinary_storage',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -176,3 +178,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+#setting.pyの最後に追加でOK
+CLOUDINARY_STORAGE  = {
+    'CLOUD_NAME':'hkshpgcii',
+    'API_KEY':env.str('CLOUDINARY_API_KEY'),
+    'API_SECRET':env.str('CLOUDINARY_API_SECRET')
+}
