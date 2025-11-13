@@ -1,1 +1,1 @@
-web: gunicorn --workers=1 --worker-class=sync vegeket.wsgi --timeout 300 --log-file -
+web: gunicorn --workers=1 --worker-class=sync config.wsgi --timeout 300 --log-file -
