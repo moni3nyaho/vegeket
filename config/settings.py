@@ -61,7 +61,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', #追記
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -178,8 +177,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 #setting.pyの最後に追加でOK
 CLOUDINARY_STORAGE  = {
@@ -187,5 +186,3 @@ CLOUDINARY_STORAGE  = {
     'API_KEY':env.str('CLOUDINARY_API_KEY'),
     'API_SECRET':env.str('CLOUDINARY_API_SECRET')
 }
-MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
