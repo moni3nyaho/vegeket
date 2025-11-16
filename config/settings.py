@@ -185,3 +185,5 @@ CLOUDINARY_STORAGE  = {
     'API_KEY':env.str('CLOUDINARY_API_KEY'),
     'API_SECRET':env.str('CLOUDINARY_API_SECRET')
 }
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
