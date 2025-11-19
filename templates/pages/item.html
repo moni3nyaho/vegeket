@@ -6,7 +6,7 @@
     <div class="col-12 col-lg-6">
       <div class="bg-white border overflow-hidden">
         <!-- <img src="/{{ object.image }}" width="100%"> -->
-        <img src="{{ object.image.url|cloudinary:"w_200,h_200,c_fill,g_auto" }}" alt="">
+        <img src="{{ object.image.url }}" alt="{{ object.name }}" class="product=image">
       </div>
     </div>
     <div class="col-12 col-lg-6">
