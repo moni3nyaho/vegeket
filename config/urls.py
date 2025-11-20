@@ -19,7 +19,7 @@ from django.urls import path
 from base import views
 from django.contrib.auth.views import LogoutView
 from django.contrib.auth import views as auth_views
-from .views import SignUpView #追記11/20
+from base.views.account_views import SignUpView #追記11/20
 
 urlpatterns = [
     path('admin/', admin.site.urls),
